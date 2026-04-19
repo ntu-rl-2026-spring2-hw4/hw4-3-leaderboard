@@ -1,35 +1,3 @@
 [
-  {
-    "student_id": "Baseline",
-    "submission_time": "",
-    "score": 450.0,
-    "mean_return": 450.0,
-    "std_return": 0.0,
-    "num_episodes": 100,
-    "audit": {
-      "run_url": ""
-    }
-  },
-  {
-    "student_id": "r14922017",
-    "submission_time": "2026-04-19T18:43:35.550972+00:00",
-    "score": 0.1965,
-    "mean_return": 1.0861,
-    "std_return": 0.8896,
-    "num_episodes": 100,
-    "audit": {
-      "run_url": "https://github.com/KappaBarbarosa/DRL-Assignment-4/actions/runs/24636342156"
-    }
-  },
-  {
-    "student_id": "r14922018",
-    "submission_time": "2026-04-19T19:44:47.946252+00:00",
-    "score": 0.1965,
-    "mean_return": 1.0861,
-    "std_return": 0.8896,
-    "num_episodes": 100,
-    "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-KappaBarbarosa/actions/runs/24637532661"
-    }
-  }
+  
 ]
