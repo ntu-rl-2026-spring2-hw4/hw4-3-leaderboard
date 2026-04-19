@@ -2,7 +2,7 @@
 """
 update_score.py — update leaderboard.json with a student's HW4 Q3 result.
 
-HW4 Q3 is a single-task leaderboard (DMC humanoid-walk). Each submission is
+HW4 Q3 is a single-task leaderboard (DMC humanoid-run). Each submission is
 evaluated over 100 episodes; the ranked score is `mean(returns) - std(returns)`.
 
 Usage (from GitHub Actions or locally):
@@ -29,7 +29,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = REPO_ROOT / "leaderboard.json"
 
-TASK = "humanoid-walk"
+TASK = "humanoid-run"
 EXPECTED_EPISODES = 100
 REQUIRED_FIELDS = ("score", "mean_return", "std_return", "num_episodes")
 

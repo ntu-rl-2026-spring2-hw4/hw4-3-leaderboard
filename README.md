@@ -1,13 +1,13 @@
 # NTU 2026 Spring DRL HW4 Q3 Leaderboard
 
 Static leaderboard for the NTU Deep Reinforcement Learning course HW4 Q3
-(DMC **humanoid-walk**), hosted on **GitHub Pages**.
+(DMC **humanoid-run**), hosted on **GitHub Pages**.
 Scores are stored in `leaderboard.json` and displayed at the GitHub Pages URL
 of this repo.
 
 ## Task & scoring
 
-- Environment: `humanoid-walk` (dm_control suite) via `make_dmc_env(..., flatten=True, use_pixels=False)`.
+- Environment: `humanoid-run` (dm_control suite) via `make_dmc_env(..., flatten=True, use_pixels=False)`.
 - Episodes per submission: **100**.
 - Ranking score: **`mean(returns) − std(returns)`**.
 
