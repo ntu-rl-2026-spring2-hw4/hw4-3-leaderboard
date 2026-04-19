@@ -189,9 +189,7 @@
     a.time-cell { text-decoration: none; }
     a.time-cell:hover { color: var(--accent); text-decoration: underline; }
 
-    .score-cell { font-weight: 700; font-size: .95rem; }
-    .score-cell.passed { color: var(--green); }
-    .score-cell.failed { color: var(--red); }
+    .score-cell { font-weight: 700; font-size: .95rem; color: var(--accent); }
 
     .stat-cell { color: var(--text); font-size: .85rem; font-family: 'Fira Code', 'Cascadia Code', monospace; }
     .stat-cell.muted { color: var(--muted); }
@@ -249,7 +247,7 @@
 </header>
 
 <div class="formula-card">
-  Score = <code>mean(returns) − std(returns)</code> &nbsp;·&nbsp;
+  Score = <code>mean(returns) − std(returns)</code>
 </div>
 
 <p class="deploy-time" id="deployTime"></p>
@@ -263,15 +261,7 @@
   </table>
 </div>
 
-<div class="legend">
-  <div class="legend-item"><div class="dot" style="background:var(--green)"></div>Score ≥ 450 (baseline)</div>
-  <div class="legend-item"><div class="dot" style="background:var(--red)"></div>Score &lt; 450</div>
-</div>
-
 <script>
-/* ── Config ────────────────────────────────────────────────────── */
-const BASELINE = 450;
-
 /* ── State ─────────────────────────────────────────────────────── */
 let DATA    = [];
 let sortKey = "score";
@@ -377,9 +367,6 @@ function render() {
       : "—";
 
     const score = entry.score;
-    const scoreClass = (typeof score === "number")
-      ? (score >= BASELINE ? "passed" : "failed")
-      : "";
     const scoreStr = (typeof score === "number") ? score.toFixed(2) : "—";
     const meanStr  = (typeof entry.mean_return === "number") ? entry.mean_return.toFixed(2) : "—";
     const stdStr   = (typeof entry.std_return  === "number") ? entry.std_return.toFixed(2)  : "—";
@@ -395,7 +382,7 @@ function render() {
         <td class="col-rank"><span class="rank-cell ${rankClass}">${rankStr}</span></td>
         <td class="col-sid"><span class="student-id">${esc(entry.student_id)}</span></td>
         <td>${timeEl}</td>
-        <td><span class="score-cell ${scoreClass}">${scoreStr}</span></td>
+        <td><span class="score-cell">${scoreStr}</span></td>
         <td><span class="stat-cell">${meanStr}</span></td>
         <td><span class="stat-cell muted">${stdStr}</span></td>
         <td><span class="stat-cell muted">${nStr}</span></td>

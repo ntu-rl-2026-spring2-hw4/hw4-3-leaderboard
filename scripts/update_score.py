@@ -31,7 +31,6 @@ DATA_FILE = REPO_ROOT / "leaderboard.json"
 
 TASK = "humanoid-walk"
 EXPECTED_EPISODES = 100
-BASELINE_SCORE = 450.0
 REQUIRED_FIELDS = ("score", "mean_return", "std_return", "num_episodes")
 
 

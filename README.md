@@ -10,7 +10,6 @@ of this repo.
 - Environment: `humanoid-walk` (dm_control suite) via `make_dmc_env(..., flatten=True, use_pixels=False)`.
 - Episodes per submission: **100**.
 - Ranking score: **`mean(returns) − std(returns)`**.
-- Baseline: **450** (score ≥ 450 ⇒ full partial-credit on the leaderboard portion).
 
 ## How submissions are received
 
