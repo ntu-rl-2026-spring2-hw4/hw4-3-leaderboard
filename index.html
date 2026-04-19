@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTU Deep Reinforcement Learning Class Spring 2026 HW4 Q3 LeaderBoard</title>
+  <style>
+    /* ─── Reset & base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0f1a;
+      --surface:   #151929;
+      --surface2:  #1e2438;
+      --border:    #2a3050;
+      --accent:    #4f8ef7;
+      --accent2:   #7c5af7;
+      --gold:      #f5c842;
+      --silver:    #b0bec5;
+      --bronze:    #cd7f32;
+      --green:     #4caf82;
+      --red:       #e05c5c;
+      --muted:     #6b7694;
+      --text:      #dde3f5;
+      --text-dim:  #8993b5;
+      --radius:    10px;
+      --row-hover: #1d2540;
+    }
+
+    html[data-theme="light"] {
+      --bg:        #f0f2f8;
+      --surface:   #ffffff;
+      --surface2:  #e4e8f5;
+      --border:    #ccd1e8;
+      --accent:    #3b7de8;
+      --accent2:   #6340e0;
+      --gold:      #c8960a;
+      --silver:    #607d8b;
+      --bronze:    #8b5a2b;
+      --green:     #2a9960;
+      --red:       #c0392b;
+      --muted:     #8890aa;
+      --text:      #1a1f36;
+      --text-dim:  #505878;
+      --row-hover: #e4e8f5;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    header { text-align: center; margin-bottom: 1.2rem; }
+
+    h1 {
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: .82rem;
+      color: var(--text-dim);
+      margin-bottom: .4rem;
+    }
+
+    .deploy-time {
+      text-align: center;
+      font-size: .74rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .formula-card {
+      max-width: 640px;
+      margin: 0 auto 1.4rem;
+      padding: .7rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      text-align: center;
+      font-size: .82rem;
+      color: var(--text-dim);
+    }
+
+    .formula-card code {
+      font-family: 'Fira Code', 'Cascadia Code', monospace;
+      color: var(--accent);
+      font-size: .82rem;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .6rem 1.4rem;
+      margin-top: 1.4rem;
+      margin-bottom: 1rem;
+      font-size: .75rem;
+      color: var(--text-dim);
+    }
+
+    .legend-item { display: flex; align-items: center; gap: .4rem; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    .table-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow-x: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .82rem;
+    }
+
+    th.col-rank, td.col-rank {
+      position: sticky; left: 0; z-index: 2;
+      background: var(--surface2);
+    }
+    tbody td.col-rank { background: var(--bg); }
+    tbody tr:hover td.col-rank { background: var(--row-hover); }
+
+    th.col-sid, td.col-sid {
+      position: sticky; left: 44px; z-index: 2;
+      background: var(--surface2);
+    }
+    tbody td.col-sid { background: var(--bg); }
+    tbody tr:hover td.col-sid { background: var(--row-hover); }
+
+    thead th {
+      background: var(--surface2);
+      color: var(--text-dim);
+      font-weight: 600;
+      font-size: .72rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .7rem .9rem;
+      white-space: nowrap;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      user-select: none;
+      cursor: pointer;
+    }
+
+    thead th:hover { color: var(--text); }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background .15s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--row-hover); }
+
+    td {
+      padding: .65rem .9rem;
+      white-space: nowrap;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .rank-cell {
+      text-align: center;
+      font-weight: 700;
+      font-size: .9rem;
+      min-width: 2.2rem;
+      display: inline-block;
+    }
+
+    .rank-1 { color: var(--gold); }
+    .rank-2 { color: var(--silver); }
+    .rank-3 { color: var(--bronze); }
+
+    .student-id { font-weight: 600; font-size: .85rem; }
+
+    .time-cell { color: var(--text-dim); font-size: .78rem; }
+    a.time-cell { text-decoration: none; }
+    a.time-cell:hover { color: var(--accent); text-decoration: underline; }
+
+    .score-cell { font-weight: 700; font-size: .95rem; }
+    .score-cell.passed { color: var(--green); }
+    .score-cell.failed { color: var(--red); }
+
+    .stat-cell { color: var(--text); font-size: .85rem; font-family: 'Fira Code', 'Cascadia Code', monospace; }
+    .stat-cell.muted { color: var(--muted); }
+
+    .state-msg {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 18px; height: 18px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      margin-right: .5rem;
+      vertical-align: middle;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #themeToggle {
+      position: fixed;
+      top: 1rem; right: 1rem;
+      z-index: 1000;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      width: 2.2rem; height: 2.2rem;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .15s, color .15s, background .15s;
+    }
+
+    #themeToggle:hover { border-color: var(--accent); color: var(--text); }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.1rem; }
+      td, th { padding: .5rem .55rem; font-size: .74rem; }
+    }
+  </style>
+</head>
+<body>
+
+<button id="themeToggle" title="Toggle light/dark mode">🌙</button>
+
+<header>
+  <h1>NTU Deep Reinforcement Learning Class Spring 2026 HW4 Q3 LeaderBoard</h1>
+  <div class="subtitle">DMC · humanoid-walk · 100 episodes</div>
+</header>
+
+<div class="formula-card">
+  Score = <code>mean(returns) − std(returns)</code> &nbsp;·&nbsp; baseline: <code>450</code>
+</div>
+
+<p class="deploy-time" id="deployTime"></p>
+
+<div class="table-wrap">
+  <table>
+    <thead id="thead"></thead>
+    <tbody id="tbody">
+      <tr><td colspan="20" class="state-msg"><span class="spinner"></span>Loading…</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot" style="background:var(--green)"></div>Score ≥ 450 (baseline)</div>
+  <div class="legend-item"><div class="dot" style="background:var(--red)"></div>Score &lt; 450</div>
+</div>
+
+<script>
+/* ── Config ────────────────────────────────────────────────────── */
+const BASELINE = 450;
+
+/* ── State ─────────────────────────────────────────────────────── */
+let DATA    = [];
+let sortKey = "score";
+let sortAsc = false;
+
+/* ── Data loading ──────────────────────────────────────────────── */
+async function init() {
+  try {
+    const r = await fetch("leaderboard.json?_=" + Date.now());
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    DATA = await r.json();
+
+    const lm = r.headers.get("Last-Modified");
+    if (lm) {
+      const d = new Date(lm);
+      document.getElementById("deployTime").textContent =
+        "Last updated: " + d.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+    }
+
+    render();
+  } catch (e) {
+    document.getElementById("tbody").innerHTML =
+      `<tr><td colspan="20" class="state-msg">⚠ Failed to load data: ${esc(e.message)}</td></tr>`;
+  }
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+const COL_DEFS = [
+  { key: "rank",            label: "#",              sortable: false },
+  { key: "student_id",      label: "Student ID",     sortable: true  },
+  { key: "submission_time", label: "Submitted",      sortable: true  },
+  { key: "score",           label: "Score",          sortable: true  },
+  { key: "mean_return",     label: "Mean Return",    sortable: true  },
+  { key: "std_return",      label: "Std Return",     sortable: true  },
+  { key: "num_episodes",    label: "Episodes",       sortable: true  },
+];
+
+function buildHeader() {
+  const tr = document.createElement("tr");
+  COL_DEFS.forEach(col => {
+    const th = document.createElement("th");
+    th.textContent = col.label;
+    if (col.key === "rank")       th.classList.add("col-rank");
+    if (col.key === "student_id") th.classList.add("col-sid");
+    if (col.key === sortKey)      th.classList.add("sorted");
+    if (col.sortable) {
+      th.addEventListener("click", () => {
+        if (sortKey === col.key) { sortAsc = !sortAsc; }
+        else { sortKey = col.key; sortAsc = (col.key === "student_id" || col.key === "submission_time"); }
+        render();
+      });
+    }
+    tr.appendChild(th);
+  });
+  document.getElementById("thead").replaceChildren(tr);
+}
+
+/* ── Sorting ────────────────────────────────────────────────────── */
+function getVal(e, key) {
+  if (key === "student_id")      return e.student_id ?? "";
+  if (key === "submission_time") return e.submission_time ?? "";
+  if (key === "score")           return e.score ?? -Infinity;
+  if (key === "mean_return")     return e.mean_return ?? -Infinity;
+  if (key === "std_return")      return e.std_return ?? Infinity;
+  if (key === "num_episodes")    return e.num_episodes ?? 0;
+  return 0;
+}
+
+function sorted() {
+  return [...DATA].sort((a, b) => {
+    const va = getVal(a, sortKey), vb = getVal(b, sortKey);
+    if (typeof va === "string") return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    return sortAsc ? va - vb : vb - va;
+  });
+}
+
+/* ── Render ─────────────────────────────────────────────────────── */
+function render() {
+  buildHeader();
+  const tbody = document.getElementById("tbody");
+
+  if (DATA.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="20" class="state-msg">No submissions yet.</td></tr>`;
+    return;
+  }
+
+  // Rank by score (desc) — ties broken by mean_return then earlier submission
+  const byScore = [...DATA].sort((a, b) => {
+    if ((b.score ?? -Infinity) !== (a.score ?? -Infinity)) return (b.score ?? -Infinity) - (a.score ?? -Infinity);
+    if ((b.mean_return ?? -Infinity) !== (a.mean_return ?? -Infinity)) return (b.mean_return ?? -Infinity) - (a.mean_return ?? -Infinity);
+    return (a.submission_time || "").localeCompare(b.submission_time || "");
+  });
+  const rankMap = Object.fromEntries(byScore.map((e, i) => [e.student_id, i + 1]));
+
+  const rows = sorted().map(entry => {
+    const rank = rankMap[entry.student_id];
+    const rankClass = rank <= 3 ? `rank-${rank}` : "";
+    const rankStr   = rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : rank;
+
+    const tRaw = entry.submission_time ? new Date(entry.submission_time) : null;
+    const timeStr = tRaw
+      ? tRaw.toLocaleDateString() + " " + tRaw.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})
+      : "—";
+
+    const score = entry.score;
+    const scoreClass = (typeof score === "number")
+      ? (score >= BASELINE ? "passed" : "failed")
+      : "";
+    const scoreStr = (typeof score === "number") ? score.toFixed(2) : "—";
+    const meanStr  = (typeof entry.mean_return === "number") ? entry.mean_return.toFixed(2) : "—";
+    const stdStr   = (typeof entry.std_return  === "number") ? entry.std_return.toFixed(2)  : "—";
+    const nStr     = entry.num_episodes ?? "—";
+
+    const runUrl = entry.audit?.run_url || null;
+    const timeEl = runUrl
+      ? `<a class="time-cell" href="${runUrl}" target="_blank" rel="noopener">${timeStr}</a>`
+      : `<span class="time-cell">${timeStr}</span>`;
+
+    return `
+      <tr>
+        <td class="col-rank"><span class="rank-cell ${rankClass}">${rankStr}</span></td>
+        <td class="col-sid"><span class="student-id">${esc(entry.student_id)}</span></td>
+        <td>${timeEl}</td>
+        <td><span class="score-cell ${scoreClass}">${scoreStr}</span></td>
+        <td><span class="stat-cell">${meanStr}</span></td>
+        <td><span class="stat-cell muted">${stdStr}</span></td>
+        <td><span class="stat-cell muted">${nStr}</span></td>
+      </tr>`;
+  });
+
+  tbody.innerHTML = rows.join("");
+}
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;");
+}
+
+/* ── Theme toggle ───────────────────────────────────────────────── */
+const toggleBtn = document.getElementById("themeToggle");
+
+function applyTheme(light) {
+  document.documentElement.dataset.theme = light ? "light" : "dark";
+  toggleBtn.textContent = light ? "☀️" : "🌙";
+}
+
+toggleBtn.addEventListener("click", () => {
+  const isLight = document.documentElement.dataset.theme === "light";
+  localStorage.setItem("theme", isLight ? "dark" : "light");
+  applyTheme(!isLight);
+});
+
+const saved = localStorage.getItem("theme");
+const preferLight = saved ? saved === "light" : window.matchMedia("(prefers-color-scheme: light)").matches;
+applyTheme(preferLight);
+
+/* ── Boot ───────────────────────────────────────────────────────── */
+init();
+</script>
+</body>
+</html>

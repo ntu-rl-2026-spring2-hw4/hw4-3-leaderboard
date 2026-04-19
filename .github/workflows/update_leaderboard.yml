@@ -1,0 +1,113 @@
+name: Update Leaderboard
+
+on:
+  # Triggered remotely by the evaluation platform via GitHub API:
+  #   POST /repos/{owner}/{repo}/dispatches
+  #   Body: { "event_type": "submit_score", "client_payload": { ... } }
+  repository_dispatch:
+    types: [submit_score]
+
+  # Also allow manual trigger from GitHub UI for testing
+  workflow_dispatch:
+    inputs:
+      student_id:
+        description: "Student ID (e.g. r12345678)"
+        required: true
+      results_json:
+        description: |
+          JSON results, e.g.:
+          {"score":453.2,"mean_return":480.0,"std_return":26.8,"num_episodes":100}
+        required: true
+      delete:
+        description: "Set to 'true' to delete the student's entry"
+        required: false
+        default: "false"
+      run_url:
+        description: "Judge workflow run URL for audit (e.g. https://github.com/org/repo/actions/runs/123)"
+        required: false
+        default: ""
+
+concurrency:
+  group: leaderboard-writer
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push leaderboard.json
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # ── Resolve inputs (repository_dispatch or workflow_dispatch) ──
+      - name: Set variables
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "student_id=${{ github.event.client_payload.student_id }}" >> $GITHUB_OUTPUT
+            # results_json may contain special chars — write to file instead
+            echo '${{ toJson(github.event.client_payload.results) }}' > /tmp/results.json
+            echo "delete=${{ github.event.client_payload.delete || 'false' }}" >> $GITHUB_OUTPUT
+            echo "run_url=${{ github.event.client_payload.audit.run_url }}" >> $GITHUB_OUTPUT
+          else
+            echo "student_id=${{ inputs.student_id }}" >> $GITHUB_OUTPUT
+            echo '${{ inputs.results_json }}' > /tmp/results.json
+            echo "delete=${{ inputs.delete }}" >> $GITHUB_OUTPUT
+            echo "run_url=${{ inputs.run_url }}" >> $GITHUB_OUTPUT
+          fi
+
+      # ── Deadline check ──────────────────────────────────────────
+      - name: Check deadline
+        run: |
+          DEADLINE="2026-04-22T23:59:00+08:00"
+          NOW=$(date -u +%Y-%m-%dT%H:%M:%S+00:00)
+          if [ "$(date -d "$NOW" +%s)" -gt "$(date -d "$DEADLINE" +%s)" ]; then
+            echo "::error::Submission deadline has passed ($DEADLINE). No longer accepting updates."
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ── Delete mode ───────────────────────────────────────────────
+      - name: Delete entry
+        if: steps.vars.outputs.delete == 'true'
+        run: |
+          python scripts/update_score.py \
+            --student-id "${{ steps.vars.outputs.student_id }}" \
+            --delete
+
+      # ── Update mode ───────────────────────────────────────────────
+      - name: Update score
+        if: steps.vars.outputs.delete != 'true'
+        run: |
+          AUDIT=$(jq -n --arg run_url "${{ steps.vars.outputs.run_url }}" '{run_url: $run_url}')
+          python scripts/update_score.py \
+            --student-id "${{ steps.vars.outputs.student_id }}" \
+            --results "$(cat /tmp/results.json)" \
+            --audit "$AUDIT"
+
+      # ── Commit & push ─────────────────────────────────────────────
+      - name: Commit updated leaderboard
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add leaderboard.json
+          git diff --cached --quiet || git commit -m \
+            "leaderboard: update ${{ steps.vars.outputs.student_id }}"
+          # Defensive rebase-and-push retry loop. Top-level concurrency already
+          # serializes runs, but this protects against any out-of-band commits
+          # (manual edits, other workflows) racing with us.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push failed (attempt $i), rebasing on origin and retrying..."
+            git pull --rebase origin "$(git rev-parse --abbrev-ref HEAD)"
+            sleep 2
+          done
+          echo "::error::Failed to push leaderboard update after 5 attempts"
+          exit 1

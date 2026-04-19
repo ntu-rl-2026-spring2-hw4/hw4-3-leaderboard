@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Also re-deploy after leaderboard data is updated
+  workflow_run:
+    workflows: ["Update Leaderboard"]
+    types: [completed]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time; skip queued runs but keep the in-progress one
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # For workflow_run triggers, check out the latest main
+          ref: main
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the whole repo root (index.html + leaderboard.json)
+          path: .
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

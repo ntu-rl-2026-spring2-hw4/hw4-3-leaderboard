@@ -1,0 +1,13 @@
+[
+  {
+    "student_id": "Baseline",
+    "submission_time": "",
+    "score": 450.0,
+    "mean_return": 450.0,
+    "std_return": 0.0,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": ""
+    }
+  }
+]
