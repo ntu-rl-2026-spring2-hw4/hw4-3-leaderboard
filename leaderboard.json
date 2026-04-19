@@ -9,5 +9,16 @@
     "audit": {
       "run_url": ""
     }
+  },
+  {
+    "student_id": "r14922017",
+    "submission_time": "2026-04-19T18:43:35.550972+00:00",
+    "score": 0.1965,
+    "mean_return": 1.0861,
+    "std_return": 0.8896,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/KappaBarbarosa/DRL-Assignment-4/actions/runs/24636342156"
+    }
   }
 ]
