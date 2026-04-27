@@ -75,5 +75,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Ching367436/actions/runs/25002358125"
     }
+  },
+  {
+    "student_id": "b12902071",
+    "submission_time": "2026-04-27T17:36:51.090955+00:00",
+    "score": 0.2647,
+    "mean_return": 0.8417,
+    "std_return": 0.577,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-JianBin0218/actions/runs/25010106889"
+    }
   }
 ]
