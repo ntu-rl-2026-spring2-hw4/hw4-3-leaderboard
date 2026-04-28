@@ -152,5 +152,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-cyr0109/actions/runs/25043270530"
     }
+  },
+  {
+    "student_id": "112582009",
+    "submission_time": "2026-04-28T10:53:13.978299+00:00",
+    "score": 274.9236,
+    "mean_return": 343.8894,
+    "std_return": 68.9658,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-cghaocg/actions/runs/25048633179"
+    }
   }
 ]
