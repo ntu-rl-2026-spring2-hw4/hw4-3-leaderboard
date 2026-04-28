@@ -97,5 +97,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lieDownMan/actions/runs/25029977081"
     }
+  },
+  {
+    "student_id": "b14902002",
+    "submission_time": "2026-04-28T03:14:26.713133+00:00",
+    "score": 0.2647,
+    "mean_return": 0.8417,
+    "std_return": 0.577,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-a97101103Z/actions/runs/25031854125"
+    }
   }
 ]
