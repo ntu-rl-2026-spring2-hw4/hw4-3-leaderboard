@@ -119,5 +119,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-sinkboy-chen/actions/runs/25032514337"
     }
+  },
+  {
+    "student_id": "b11201022",
+    "submission_time": "2026-04-28T06:20:45.934764+00:00",
+    "score": 121.9287,
+    "mean_return": 127.8293,
+    "std_return": 5.9006,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-jling8208/actions/runs/25037248487"
+    }
   }
 ]
