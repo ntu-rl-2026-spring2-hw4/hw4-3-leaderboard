@@ -210,13 +210,13 @@
   },
   {
     "student_id": "r14946004",
-    "submission_time": "2026-04-29T07:10:38.053546+00:00",
-    "score": 583.5132,
-    "mean_return": 610.7236,
-    "std_return": 27.2104,
+    "submission_time": "2026-04-29T19:28:51.741730+00:00",
+    "score": 619.5023,
+    "mean_return": 644.3408,
+    "std_return": 24.8385,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-xavier1021/actions/runs/25091806047"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-xavier1021/actions/runs/25123478218"
     }
   },
   {
