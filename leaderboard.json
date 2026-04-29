@@ -218,5 +218,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-xavier1021/actions/runs/25091806047"
     }
+  },
+  {
+    "student_id": "b12902117",
+    "submission_time": "2026-04-29T11:49:53.644375+00:00",
+    "score": 617.4524,
+    "mean_return": 676.9992,
+    "std_return": 59.5468,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-KHShao0126/actions/runs/25092923518"
+    }
   }
 ]
