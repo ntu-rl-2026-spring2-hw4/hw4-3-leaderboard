@@ -185,5 +185,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-ws6125-4/actions/runs/25087669236"
     }
+  },
+  {
+    "student_id": "b13902145",
+    "submission_time": "2026-04-29T03:20:23.037802+00:00",
+    "score": 225.9641,
+    "mean_return": 311.2669,
+    "std_return": 85.3028,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-VerstandTsai/actions/runs/25089188760"
+    }
   }
 ]
