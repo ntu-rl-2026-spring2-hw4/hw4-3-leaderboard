@@ -34,13 +34,13 @@
   },
   {
     "student_id": "r14922163",
-    "submission_time": "2026-04-21T06:43:57.908775+00:00",
-    "score": 0.2647,
-    "mean_return": 0.8417,
-    "std_return": 0.577,
+    "submission_time": "2026-04-29T16:20:28.318284+00:00",
+    "score": 465.6165,
+    "mean_return": 521.3928,
+    "std_return": 55.7763,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-togimoto/actions/runs/24708101244"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-togimoto/actions/runs/25117836509"
     }
   },
   {
