@@ -372,5 +372,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-AaronchenBro/actions/runs/25173074533"
     }
+  },
+  {
+    "student_id": "t14902120",
+    "submission_time": "2026-04-30T15:23:20.147117+00:00",
+    "score": 0.3149,
+    "mean_return": 0.8171,
+    "std_return": 0.5022,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-UG0303/actions/runs/25173821393"
+    }
   }
 ]
