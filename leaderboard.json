@@ -339,5 +339,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-chh-529/actions/runs/25159184397"
     }
+  },
+  {
+    "student_id": "r13521617",
+    "submission_time": "2026-04-30T10:02:40.787681+00:00",
+    "score": 352.6068,
+    "mean_return": 361.698,
+    "std_return": 9.0913,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-YungIChang517/actions/runs/25159375610"
+    }
   }
 ]
