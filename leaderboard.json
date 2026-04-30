@@ -361,5 +361,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-jingwu2001/actions/runs/25167690914"
     }
+  },
+  {
+    "student_id": "b12901165",
+    "submission_time": "2026-04-30T15:08:51.192262+00:00",
+    "score": 1.0069,
+    "mean_return": 1.6444,
+    "std_return": 0.6375,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-AaronchenBro/actions/runs/25173074533"
+    }
   }
 ]
