@@ -284,5 +284,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-qwaszxallen/actions/runs/25145816412"
     }
+  },
+  {
+    "student_id": "b13402010",
+    "submission_time": "2026-04-30T04:59:56.900764+00:00",
+    "score": 175.5895,
+    "mean_return": 196.4579,
+    "std_return": 20.8684,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-burger-007/actions/runs/25148219732"
+    }
   }
 ]
