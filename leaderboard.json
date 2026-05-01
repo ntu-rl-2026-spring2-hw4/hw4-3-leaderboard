@@ -438,5 +438,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-ernestii26-1/actions/runs/25206898451"
     }
+  },
+  {
+    "student_id": "b12901140",
+    "submission_time": "2026-05-01T08:42:43.561566+00:00",
+    "score": 295.865,
+    "mean_return": 375.3328,
+    "std_return": 79.4678,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lexvvcy/actions/runs/25208391044"
+    }
   }
 ]
