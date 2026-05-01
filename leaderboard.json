@@ -427,5 +427,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-aachtm/actions/runs/25200351050"
     }
+  },
+  {
+    "student_id": "b12902056",
+    "submission_time": "2026-05-01T07:44:24.464665+00:00",
+    "score": 392.8249,
+    "mean_return": 403.1051,
+    "std_return": 10.2803,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-ernestii26-1/actions/runs/25206898451"
+    }
   }
 ]
