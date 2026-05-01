@@ -397,13 +397,13 @@
   },
   {
     "student_id": "b12902147",
-    "submission_time": "2026-05-01T01:23:07.943537+00:00",
-    "score": 0.3469,
-    "mean_return": 0.8668,
-    "std_return": 0.5199,
+    "submission_time": "2026-05-01T01:31:02.384840+00:00",
+    "score": 288.8287,
+    "mean_return": 302.8042,
+    "std_return": 13.9755,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Kaiweiyan-1/actions/runs/25197702482"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Kaiweiyan-1/actions/runs/25197906462"
     }
   }
 ]
