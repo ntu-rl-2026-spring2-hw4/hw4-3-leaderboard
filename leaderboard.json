@@ -471,5 +471,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-johnny20tech/actions/runs/25221706627"
     }
+  },
+  {
+    "student_id": "r14921062",
+    "submission_time": "2026-05-01T17:09:16.225698+00:00",
+    "score": 266.5566,
+    "mean_return": 271.0683,
+    "std_return": 4.5117,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Duckermelon/actions/runs/25224139348"
+    }
   }
 ]
