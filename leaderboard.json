@@ -155,13 +155,13 @@
   },
   {
     "student_id": "112582009",
-    "submission_time": "2026-05-01T13:24:17.546282+00:00",
-    "score": 465.1699,
-    "mean_return": 482.2219,
-    "std_return": 17.0521,
+    "submission_time": "2026-05-01T13:51:25.548443+00:00",
+    "score": 468.358,
+    "mean_return": 480.1296,
+    "std_return": 11.7716,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-cghaocg/actions/runs/25215862648"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-cghaocg/actions/runs/25216757052"
     }
   },
   {
