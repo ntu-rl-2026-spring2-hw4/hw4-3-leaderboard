@@ -416,5 +416,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lcjconte/actions/runs/25199409165"
     }
+  },
+  {
+    "student_id": "a14221103",
+    "submission_time": "2026-05-01T03:09:42.431727+00:00",
+    "score": 385.7408,
+    "mean_return": 402.0792,
+    "std_return": 16.3384,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-aachtm/actions/runs/25200351050"
+    }
   }
 ]
