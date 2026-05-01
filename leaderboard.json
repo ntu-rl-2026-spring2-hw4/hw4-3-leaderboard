@@ -405,5 +405,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Kaiweiyan-1/actions/runs/25197906462"
     }
+  },
+  {
+    "student_id": "t14902154",
+    "submission_time": "2026-05-01T02:30:11.692596+00:00",
+    "score": 196.8854,
+    "mean_return": 212.1855,
+    "std_return": 15.3001,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lcjconte/actions/runs/25199409165"
+    }
   }
 ]
