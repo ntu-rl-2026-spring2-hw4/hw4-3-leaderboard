@@ -276,13 +276,13 @@
   },
   {
     "student_id": "r14922a11",
-    "submission_time": "2026-05-01T05:14:14.721835+00:00",
-    "score": 481.6487,
-    "mean_return": 546.325,
-    "std_return": 64.6763,
+    "submission_time": "2026-05-01T19:13:36.696613+00:00",
+    "score": 513.0711,
+    "mean_return": 590.7257,
+    "std_return": 77.6546,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-qwaszxallen/actions/runs/25203278821"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-qwaszxallen/actions/runs/25228886308"
     }
   },
   {
