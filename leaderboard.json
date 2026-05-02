@@ -537,5 +537,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Chi-Lei-Tsai/actions/runs/25246880266"
     }
+  },
+  {
+    "student_id": "r14921126",
+    "submission_time": "2026-05-02T11:02:40.101354+00:00",
+    "score": 268.8678,
+    "mean_return": 409.2406,
+    "std_return": 140.3728,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-hejijun-ho/actions/runs/25250423315"
+    }
   }
 ]
