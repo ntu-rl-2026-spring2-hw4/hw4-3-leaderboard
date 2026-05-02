@@ -452,13 +452,13 @@
   },
   {
     "student_id": "r14921066",
-    "submission_time": "2026-05-02T09:39:48.477914+00:00",
-    "score": 239.2637,
-    "mean_return": 246.6016,
-    "std_return": 7.3379,
+    "submission_time": "2026-05-02T13:25:11.693844+00:00",
+    "score": 246.4859,
+    "mean_return": 254.1973,
+    "std_return": 7.7114,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-jinyan1454-bot/actions/runs/25249058306"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-jinyan1454-bot/actions/runs/25252892543"
     }
   },
   {
