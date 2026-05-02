@@ -111,13 +111,13 @@
   },
   {
     "student_id": "b12902131",
-    "submission_time": "2026-05-01T14:23:32.939253+00:00",
-    "score": 0.4456,
-    "mean_return": 0.9526,
-    "std_return": 0.507,
+    "submission_time": "2026-05-02T08:41:20.960600+00:00",
+    "score": 0.4474,
+    "mean_return": 0.948,
+    "std_return": 0.5006,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-sinkboy-chen/actions/runs/25217881764"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-sinkboy-chen/actions/runs/25248085088"
     }
   },
   {
