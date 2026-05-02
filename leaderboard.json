@@ -515,5 +515,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-azzzzliao-1/actions/runs/25237143636"
     }
+  },
+  {
+    "student_id": "b12901071",
+    "submission_time": "2026-05-02T06:41:05.183201+00:00",
+    "score": 325.3526,
+    "mean_return": 363.4156,
+    "std_return": 38.063,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-estherhan1/actions/runs/25245997371"
+    }
   }
 ]
