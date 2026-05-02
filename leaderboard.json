@@ -199,13 +199,13 @@
   },
   {
     "student_id": "b12901044",
-    "submission_time": "2026-04-29T04:44:21.654710+00:00",
-    "score": 0.3522,
-    "mean_return": 0.9085,
-    "std_return": 0.5563,
+    "submission_time": "2026-05-02T15:29:58.620920+00:00",
+    "score": 543.9418,
+    "mean_return": 560.0783,
+    "std_return": 16.1365,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-orlando1207/actions/runs/25091301555"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-orlando1207/actions/runs/25255288874"
     }
   },
   {
