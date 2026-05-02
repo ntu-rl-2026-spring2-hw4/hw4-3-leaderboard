@@ -441,13 +441,13 @@
   },
   {
     "student_id": "b12901140",
-    "submission_time": "2026-05-02T06:24:14.032361+00:00",
-    "score": 407.7189,
-    "mean_return": 439.9542,
-    "std_return": 32.2353,
+    "submission_time": "2026-05-02T08:58:38.521736+00:00",
+    "score": 424.2684,
+    "mean_return": 454.6684,
+    "std_return": 30.4,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lexvvcy/actions/runs/25245709076"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lexvvcy/actions/runs/25248367538"
     }
   },
   {
