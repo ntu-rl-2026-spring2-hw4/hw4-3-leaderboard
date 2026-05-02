@@ -386,13 +386,13 @@
   },
   {
     "student_id": "b12901090",
-    "submission_time": "2026-05-02T11:57:16.262095+00:00",
-    "score": 404.8267,
-    "mean_return": 423.1445,
-    "std_return": 18.3178,
+    "submission_time": "2026-05-02T18:06:43.127297+00:00",
+    "score": 441.0325,
+    "mean_return": 458.1666,
+    "std_return": 17.1341,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-IONE3201/actions/runs/25251334867"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-IONE3201/actions/runs/25258366328"
     }
   },
   {
