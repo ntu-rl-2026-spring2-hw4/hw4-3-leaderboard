@@ -485,13 +485,13 @@
   },
   {
     "student_id": "r14944011",
-    "submission_time": "2026-05-01T18:25:16.925823+00:00",
-    "score": 0.2766,
-    "mean_return": 0.8552,
-    "std_return": 0.5786,
+    "submission_time": "2026-05-03T12:33:52.505299+00:00",
+    "score": 475.0106,
+    "mean_return": 492.8051,
+    "std_return": 17.7945,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-awkward-willy/actions/runs/25227020008"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-awkward-willy/actions/runs/25279251049"
     }
   },
   {
