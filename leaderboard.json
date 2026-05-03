@@ -592,5 +592,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-squarejellyfish/actions/runs/25260459479"
     }
+  },
+  {
+    "student_id": "b11705032",
+    "submission_time": "2026-05-03T02:40:41.444735+00:00",
+    "score": 137.6243,
+    "mean_return": 161.7978,
+    "std_return": 24.1736,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-jensenyang2004/actions/runs/25267918417"
+    }
   }
 ]
