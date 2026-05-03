@@ -691,5 +691,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-markwang0214/actions/runs/25274707605"
     }
+  },
+  {
+    "student_id": "b11902171",
+    "submission_time": "2026-05-03T12:41:47.279145+00:00",
+    "score": 663.4568,
+    "mean_return": 711.6438,
+    "std_return": 48.187,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-KuoAnd-1/actions/runs/25279409337"
+    }
   }
 ]
