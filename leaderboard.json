@@ -735,5 +735,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Ekstaxy/actions/runs/25288484022"
     }
+  },
+  {
+    "student_id": "b12902003",
+    "submission_time": "2026-05-03T23:35:56.483286+00:00",
+    "score": 386.9863,
+    "mean_return": 451.6042,
+    "std_return": 64.6179,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-fxck2/actions/runs/25294042330"
+    }
   }
 ]
