@@ -603,5 +603,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-jensenyang2004/actions/runs/25267918417"
     }
+  },
+  {
+    "student_id": "b12902028",
+    "submission_time": "2026-05-03T03:13:03.560145+00:00",
+    "score": 166.3001,
+    "mean_return": 170.1775,
+    "std_return": 3.8774,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Edmond0908/actions/runs/25268484834"
+    }
   }
 ]
