@@ -669,5 +669,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-rayyychen/actions/runs/25271831327"
     }
+  },
+  {
+    "student_id": "b12901008",
+    "submission_time": "2026-05-03T07:50:20.359931+00:00",
+    "score": 146.601,
+    "mean_return": 156.6757,
+    "std_return": 10.0747,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-chungcy312/actions/runs/25273505361"
+    }
   }
 ]
