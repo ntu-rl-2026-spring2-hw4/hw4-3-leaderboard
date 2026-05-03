@@ -474,13 +474,13 @@
   },
   {
     "student_id": "r14921062",
-    "submission_time": "2026-05-01T17:09:16.225698+00:00",
-    "score": 266.5566,
-    "mean_return": 271.0683,
-    "std_return": 4.5117,
+    "submission_time": "2026-05-03T06:54:32.361780+00:00",
+    "score": 479.561,
+    "mean_return": 495.2438,
+    "std_return": 15.6828,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Duckermelon/actions/runs/25224139348"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Duckermelon/actions/runs/25272431182"
     }
   },
   {
