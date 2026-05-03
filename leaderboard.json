@@ -1,13 +1,13 @@
 [
   {
     "student_id": "r14921091",
-    "submission_time": "2026-05-02T12:54:02.255895+00:00",
-    "score": 460.9977,
-    "mean_return": 480.4444,
-    "std_return": 19.4467,
+    "submission_time": "2026-05-03T13:37:20.173987+00:00",
+    "score": 462.0782,
+    "mean_return": 477.5975,
+    "std_return": 15.5193,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-keyuhan1029/actions/runs/25252329077"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-keyuhan1029/actions/runs/25280619635"
     }
   },
   {
