@@ -694,13 +694,13 @@
   },
   {
     "student_id": "b11902171",
-    "submission_time": "2026-05-03T22:03:43.898984+00:00",
-    "score": 768.3667,
-    "mean_return": 784.4601,
-    "std_return": 16.0934,
+    "submission_time": "2026-05-04T05:09:14.345721+00:00",
+    "score": 803.3893,
+    "mean_return": 830.2288,
+    "std_return": 26.8395,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-KuoAnd-1/actions/runs/25292034208"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-KuoAnd-1/actions/runs/25302104469"
     }
   },
   {
