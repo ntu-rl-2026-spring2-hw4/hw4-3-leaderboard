@@ -89,13 +89,13 @@
   },
   {
     "student_id": "b12902052",
-    "submission_time": "2026-05-04T01:40:23.438470+00:00",
-    "score": 291.3616,
-    "mean_return": 300.5793,
-    "std_return": 9.2177,
+    "submission_time": "2026-05-04T08:21:59.730361+00:00",
+    "score": 319.6525,
+    "mean_return": 328.2884,
+    "std_return": 8.6359,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lieDownMan/actions/runs/25296932974"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-lieDownMan/actions/runs/25308618858"
     }
   },
   {
