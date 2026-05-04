@@ -243,13 +243,13 @@
   },
   {
     "student_id": "r14944036",
-    "submission_time": "2026-05-04T13:21:56.722659+00:00",
-    "score": 533.8689,
-    "mean_return": 563.3676,
-    "std_return": 29.4987,
+    "submission_time": "2026-05-04T13:33:51.943157+00:00",
+    "score": 552.3042,
+    "mean_return": 577.8,
+    "std_return": 25.4958,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-weiting53/actions/runs/25319841860"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-weiting53/actions/runs/25321875460"
     }
   },
   {
