@@ -757,5 +757,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-OEmiliatanO/actions/runs/25301118386"
     }
+  },
+  {
+    "student_id": "b12705055",
+    "submission_time": "2026-05-04T06:23:09.461906+00:00",
+    "score": 221.4179,
+    "mean_return": 231.9585,
+    "std_return": 10.5406,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-nonoivan1234/actions/runs/25304224967"
+    }
   }
 ]
