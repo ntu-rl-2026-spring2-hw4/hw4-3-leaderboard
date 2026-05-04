@@ -779,5 +779,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-tsaichris/actions/runs/25306437559"
     }
+  },
+  {
+    "student_id": "b12902004",
+    "submission_time": "2026-05-04T07:56:38.675407+00:00",
+    "score": 0.2692,
+    "mean_return": 0.804,
+    "std_return": 0.5348,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-Tony041010/actions/runs/25307587112"
+    }
   }
 ]
