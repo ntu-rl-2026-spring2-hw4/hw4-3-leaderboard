@@ -746,5 +746,16 @@
     "audit": {
       "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-fxck2/actions/runs/25294042330"
     }
+  },
+  {
+    "student_id": "r14922068",
+    "submission_time": "2026-05-04T04:33:26.520134+00:00",
+    "score": 253.768,
+    "mean_return": 258.7447,
+    "std_return": 4.9767,
+    "num_episodes": 100,
+    "audit": {
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-OEmiliatanO/actions/runs/25301118386"
+    }
   }
 ]
