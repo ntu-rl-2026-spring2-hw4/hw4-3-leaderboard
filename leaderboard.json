@@ -144,13 +144,13 @@
   },
   {
     "student_id": "b11705031",
-    "submission_time": "2026-05-04T05:55:19.265291+00:00",
-    "score": 538.092,
-    "mean_return": 559.8568,
-    "std_return": 21.7647,
+    "submission_time": "2026-05-04T06:13:07.212554+00:00",
+    "score": 549.3912,
+    "mean_return": 569.9278,
+    "std_return": 20.5366,
     "num_episodes": 100,
     "audit": {
-      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-cyr0109/actions/runs/25303372293"
+      "run_url": "https://github.com/ntu-rl-2026-spring2-hw4/assignment-4-cyr0109/actions/runs/25303832503"
     }
   },
   {
